@@ -1,0 +1,11 @@
+certifi==2020.12.5
+Flask-Cors==3.0.10
+Flask-HTTPAuth==4.2.0
+imageio==2.9.0
+numpy==1.25.1
+opencv-python
+Pillow==8.1.2
+wincertstore==0.2
+gunicorn
+pandas
+boto3

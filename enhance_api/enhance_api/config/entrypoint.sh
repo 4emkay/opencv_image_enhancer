@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Starting scoring hub API v2"
+
+gunicorn -w 4 -b    0.0.0.0:8000  wsgi:server

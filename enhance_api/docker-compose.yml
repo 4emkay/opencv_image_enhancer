@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  enhance_api:
+    container_name: enhance_api
+    restart: always
+    build: ./enhance_api
+    environment:
+      - THREADS=with
+    ports:
+      - "8000:8000"
+    command: gunicorn -w 4 -b 0.0.0.0:8000  wsgi:server
+
+  nginx:
+    container_name: nginx2
+    restart: always
+    build: ./nginx
+
+    ports:
+      - "91:91"
+    depends_on:
+      - enhance_api
